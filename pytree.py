@@ -3,8 +3,7 @@ import subprocess
 import sys
 
 
-# YOUR CODE GOES here
-# Full discretion: I referenced osawill's submission because I was incredibly stuck
+# YOUR CODE GOES here - Full discretion: I referenced osawill's submission because I was incredibly stuck
 import os
 
 things_on_left = []
@@ -25,16 +24,16 @@ def print_file(filename, depth, last=False, prev_lvl=0):
 def print_directory(root, depth=0, last=False, parent=0):
     dir_num = 0
     file_num = 0
-    components = listdir(root)   #listdir is a method on OS library
+    components = listdir(root)   # listdir is a method on OS library
     components.sort()
     if (depth == 0):
         if (root[-1] == '/'):
             root = root[:1]
         print(root)
-    else:   #now, this is where we have gone past root
+    else:   # now, this is where we have gone past root
         dir_num = dir_num + 1
         if(last):
-            print(( "  " * (parent - 1)) + ("|  " * (depth - parent - 1)) + '|__' + basename(root))
+            print(("  " * (parent - 1)) + ("|  " * (depth - parent - 1)) + '|__' + basename(root))
         else:
             print(("  " * (parent)) + ("|  " * (depth - parent - 1)) + '|__' + basename(root))
 
