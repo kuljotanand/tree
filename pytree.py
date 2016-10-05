@@ -34,7 +34,7 @@ def print_directory(root, depth=0, last=False, parent=0):
         if(last):
             print (("  " * (parent - 1)) + ("|  " * (depth - parent - 1)) + '|__' + basename(root))
         else:
-            print (("  " * (parent)) + (depth - parent - 1)) + '|__' + basename(root))
+            print (("  " * (parent)) + ( "|  " * (depth - parent - 1)) + '|__' + basename(root))
 
     for i, component in items_in_dir(components):
         component = root + '/' + component
